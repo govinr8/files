@@ -1,0 +1,15 @@
+in /etc/wsl.conf
+
+[network]
+generateResolvConf = false
+
+Inside a wsl session -
+
+sudo rm /etc/resolv.conf
+# create your own /etc/resolv.conf
+sudo vim /etc/resolv.conf
+sudo chattr +i /etc/resolv.conf
+
+Immediately shutdown wsl, do not start another\session until you execute from a windows command prompt.
+
+wsl --shutdown
